@@ -46,10 +46,12 @@ describe('cli', () => {
 
       Commands:
         hello-world <name>  just a test that this works!
+        clone-it            clone the repo
                             
 
       For more info, run any command with the \`--help\` flag:
         $ <CMD> hello-world --help
+        $ <CMD> clone-it --help
         $ <CMD> --help
 
       Options:

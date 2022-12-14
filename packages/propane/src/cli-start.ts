@@ -1,5 +1,6 @@
 import { cac } from 'cac';
 import * as pkg from '../package.json';
+import { generate } from './commands/generate';
 import { helloWorld } from './commands/hello-world';
 
 export async function startCli(cwd = process.cwd(), argv = process.argv) {
@@ -10,7 +11,16 @@ export async function startCli(cwd = process.cwd(), argv = process.argv) {
     .command('hello-world <name>', 'just a test that this works!')
     .action((name: string) => helloWorld(name));
 
-  cli.command('', '').action(() => {
+  cli
+    .command('generate <template-name>', 'generates a project from a template')
+    .option('--repo <repo>', 'repository path', {
+      default: 'lund0n/propane#main',
+    })
+    .action((templateName: string, { repo }: { repo: string }) =>
+      generate(templateName, repo),
+    );
+
+  cli.command('').action(() => {
     cli.outputHelp();
   });
 
@@ -20,5 +30,6 @@ export async function startCli(cwd = process.cwd(), argv = process.argv) {
   // Parse CLI args without running the command to
   // handle command errors globally
   cli.parse(argv, { run: false });
+
   await cli.runMatchedCommand();
 }
