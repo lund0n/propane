@@ -15,6 +15,7 @@
     },
     "lint": {
       "cache": false,
+      "dependsOn": ["eslint-config-project#build"],
       "outputs": []
     },
     "test": {
