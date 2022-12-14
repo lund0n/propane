@@ -11,6 +11,7 @@
     "license",
     "keywords",
     "publishConfig",
+    "type",
     "exports",
     "main",
     "module",
