@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Node",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "module": "node16",
+    "moduleDetection": "force",
+    "target": "ES2020"
+  },
+  "allowSyntheticDefaultImports": true,
+  "resolveJsonModule": false,
+  "exclude": ["node_modules"]
+}

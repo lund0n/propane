@@ -1,0 +1,26 @@
+{
+  "sortFirst": [
+    "name",
+    "version",
+    "description",
+    "private",
+    "repository",
+    "homepage",
+    "author",
+    "bugs",
+    "license",
+    "keywords",
+    "publishConfig",
+    "exports",
+    "main",
+    "module",
+    "types",
+    "bin",
+    "files",
+    "engines",
+    "scripts",
+    "peerDependencies",
+    "dependencies",
+    "devDependencies"
+  ]
+}

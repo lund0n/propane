@@ -1,0 +1,32 @@
+{
+  "name": "prettier-config",
+  "version": "0.0.0",
+  "description": "Project Prettier Config",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lund0n/propane.git",
+    "directory": "support/prettier-config"
+  },
+  "author": "Jeremy Lund <jeremy.r.lund@gmail.com>",
+  "bugs": "https://github.com/lund0n/propane/issues",
+  "license": "MIT",
+  "keywords": [
+    "prettier"
+  ],
+  "main": ".prettierrc.json",
+  "scripts": {
+    "format": "prettier --ignore-unknown --write .",
+    "format:check": "prettier --cache --ignore-unknown --check ."
+  },
+  "peerDependencies": {
+    "prettier": ">= 2 < 3"
+  },
+  "devDependencies": {
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1"
+  },
+  "lint-staged": {
+    "*": "prettier --ignore-unknown --write"
+  }
+}

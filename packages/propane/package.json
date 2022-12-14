@@ -1,0 +1,75 @@
+{
+  "name": "propane",
+  "version": "0.0.0",
+  "description": "Tools for generating a package",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lund0n/propane.git",
+    "directory": "packages/propane"
+  },
+  "author": "Jeremy Lund <jeremy.r.lund@gmail.com>",
+  "bugs": "https://github.com/lund0n/propane/issues",
+  "license": "MIT",
+  "keywords": [
+    "checker",
+    "license",
+    "snyk"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "propane": "./bin/propane.mjs"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "engines": {
+    "node": ">=14.16"
+  },
+  "scripts": {
+    "build": "unbuild",
+    "format": "prettier --ignore-unknown --write .",
+    "format:check": "prettier --cache --ignore-unknown --check .",
+    "prepack": "unbuild",
+    "test": "vitest run --coverage",
+    "test:dev": "vitest"
+  },
+  "dependencies": {
+    "cac": "^6.7.14",
+    "execa": "^6.1.0",
+    "listr2": "^5.0.6",
+    "zod": "^3.19.1"
+  },
+  "devDependencies": {
+    "@types/mock-fs": "^4.13.1",
+    "@types/node": "^14.18.34",
+    "@vitest/coverage-c8": "^0.25.7",
+    "@vitest/ui": "^0.25.8",
+    "lint-staged": "^13.1.0",
+    "mock-fs": "^5.2.0",
+    "prettier": "^2.8.1",
+    "prettier-config": "workspace:*",
+    "tsconfig": "workspace:*",
+    "type-fest": "^3.3.0",
+    "unbuild": "^1.0.2",
+    "vite": "3.2.4",
+    "vitest": "^0.25.7",
+    "vitest-mock-process": "^1.0.4"
+  },
+  "lint-staged": {
+    "*": "prettier --ignore-unknown --write"
+  },
+  "prettier": "prettier-config"
+}

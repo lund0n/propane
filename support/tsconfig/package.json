@@ -1,0 +1,33 @@
+{
+  "name": "tsconfig",
+  "version": "0.0.0",
+  "description": "Project TypeScript Config",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lund0n/propane.git",
+    "directory": "support/ts-config"
+  },
+  "author": "Jeremy Lund <jeremy.r.lund@gmail.com>",
+  "bugs": "https://github.com/lund0n/propane/issues",
+  "license": "MIT",
+  "keywords": [
+    "prettier"
+  ],
+  "files": [
+    "base.json"
+  ],
+  "scripts": {
+    "format": "prettier --ignore-unknown --write .",
+    "format:check": "prettier --cache --ignore-unknown --check ."
+  },
+  "devDependencies": {
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1",
+    "prettier-config": "workspace:*"
+  },
+  "lint-staged": {
+    "*": "prettier --ignore-unknown --write"
+  },
+  "prettier": "prettier-config"
+}
