@@ -45,13 +45,13 @@ describe('cli', () => {
         $ <CMD> 
 
       Commands:
-        hello-world <name>  just a test that this works!
-        clone-it            clone the repo
-                            
+        hello-world <name>        just a test that this works!
+        generate <template-name>  generates a project from a template
+                                  
 
       For more info, run any command with the \`--help\` flag:
         $ <CMD> hello-world --help
-        $ <CMD> clone-it --help
+        $ <CMD> generate --help
         $ <CMD> --help
 
       Options:

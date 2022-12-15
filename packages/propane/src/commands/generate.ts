@@ -1,14 +1,12 @@
 import { resolve } from 'node:path';
-import { cloneRepository } from '../clone-repository';
+import { cloneRepository, isRepository } from '../utils/clone-repository';
 
-export async function generate(templateName: string, repo: string) {
-  // TODO allow support for local file system templates.
+export async function generate(templateName: string, src: string) {
+  const repoFilePath = isRepository(src)
+    ? await cloneRepository(src)
+    : resolve(src);
 
-  // Clone the repo containing the template.
-  const repoPath = await cloneRepository(repo);
-
-  // Create the path to the template on the file system.
-  const templatePath = resolve(repoPath, 'templates', templateName);
+  const templatePath = resolve(repoFilePath, 'templates', templateName);
 
   console.log(templatePath);
 }

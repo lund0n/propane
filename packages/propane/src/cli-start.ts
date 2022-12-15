@@ -13,11 +13,11 @@ export async function startCli(cwd = process.cwd(), argv = process.argv) {
 
   cli
     .command('generate <template-name>', 'generates a project from a template')
-    .option('--repo <repo>', 'repository path', {
+    .option('--src <source>', 'repository or template file path', {
       default: 'lund0n/propane#main',
     })
-    .action((templateName: string, { repo }: { repo: string }) =>
-      generate(templateName, repo),
+    .action((templateName: string, { src }: { src: string }) =>
+      generate(templateName, src),
     );
 
   cli.command('').action(() => {
