@@ -83,6 +83,7 @@ importers:
 
   support/eslint-config-project:
     specifiers:
+      '@rushstack/eslint-patch': ^1.2.0
       '@types/eslint': ^8.4.10
       '@typescript-eslint/eslint-plugin': ^5.46.1
       '@typescript-eslint/parser': ^5.46.1
@@ -92,9 +93,11 @@ importers:
       lint-staged: ^13.1.0
       prettier: ^2.8.1
       prettier-config: workspace:*
+      tsconfig: workspace:*
       typescript: ^4.9.4
       unbuild: ^1.0.2
     dependencies:
+      '@rushstack/eslint-patch': 1.2.0
       '@typescript-eslint/eslint-plugin': 5.46.1_imrg37k3svwu377c6q7gkarwmi
       '@typescript-eslint/parser': 5.46.1_ha6vam6werchizxrnqvarmz2zu
       eslint-config-prettier: 8.5.0_eslint@8.29.0
@@ -105,6 +108,7 @@ importers:
       lint-staged: 13.1.0
       prettier: 2.8.1
       prettier-config: link:../prettier-config
+      tsconfig: link:../tsconfig
       typescript: 4.9.4
       unbuild: 1.0.2
 
@@ -764,6 +768,10 @@ packages:
       picomatch: 2.3.1
       rollup: 3.7.4
     dev: true
+
+  /@rushstack/eslint-patch/1.2.0:
+    resolution: {integrity: sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==}
+    dev: false
 
   /@types/chai-subset/1.3.3:
     resolution: {integrity: sha512-frBecisrNGz+F4T6bcc+NLeolfiojh5FxW2klu669+8BARtyQv2C/GkNW6FUodVe4BroGMP/wER/YDGc7rEllw==}

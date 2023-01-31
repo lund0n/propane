@@ -1,15 +1,9 @@
 import type { Linter } from 'eslint';
+import { name } from '../package.json';
+import '@rushstack/eslint-patch/modern-module-resolution';
 
 const config: Linter.Config = {
-  extends: ['eslint:recommended', 'plugin:prettier/recommended'],
-  overrides: [
-    {
-      files: '*.ts',
-      extends: ['plugin:@typescript-eslint/recommended'],
-      parser: '@typescript-eslint/parser',
-      plugins: ['@typescript-eslint'],
-    },
-  ],
+  extends: [`${name}/base`, `${name}/typescript`],
 };
 
 export default config;

@@ -17,18 +17,26 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./index.d.ts",
-      "import": "./index.mjs",
-      "require": "./index.cjs"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./base": {
+      "types": "./dist/base.d.ts",
+      "import": "./dist/base.mjs",
+      "require": "./dist/base.cjs"
+    },
+    "./typescript": {
+      "types": "./dist/typescript.d.ts",
+      "import": "./dist/typescript.mjs",
+      "require": "./dist/typescript.cjs"
     }
   },
-  "main": "./index.cjs",
-  "module": "./index.mjs",
-  "types": "./index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
-    "/*.d.ts",
-    "/*.cjs",
-    "/*.mjs"
+    "dist"
   ],
   "scripts": {
     "build": "unbuild",
@@ -42,6 +50,7 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
+    "@rushstack/eslint-patch": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
     "@typescript-eslint/parser": "^5.46.1",
     "eslint-config-prettier": "^8.5.0",
@@ -53,6 +62,7 @@
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.1",
     "prettier-config": "workspace:*",
+    "tsconfig": "workspace:*",
     "typescript": "^4.9.4",
     "unbuild": "^1.0.2"
   },
